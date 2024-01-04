@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="notification" id="customAlert">
+    <span class="close" onclick="closeNotification()">&times;</span>
+    <p id="notificationText"></p>
+  </div>
+  <div class="headclass">
+    <h1>Habit Tracker</h1>
+  </div>
+  <div class="container">
+    <form id="habitForm">
+      <label for="habit">Habit:</label>
+      <input type="text" id="habit" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" required>
+
+      <button type="button" id="trackButton">Track Habit</button>
+    </form>
+
+    <table id="habitTable">
+      <thead>
+        <tr>
+          <th>Habit</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Habit data will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
